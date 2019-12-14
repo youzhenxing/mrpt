@@ -34,7 +34,9 @@ set(nanogui_CMAKE_ARGS
 ExternalProject_Add(EP_nanogui
 	PREFIX ${nanogui_PREFIX}
 	GIT_REPOSITORY https://github.com/MRPT/nanogui.git
+	GIT_TAG cafa485e4f75ec47bd89d1bade88678f42c8813d
 	GIT_SUBMODULES ext/eigen ext/glfw ext/nanovg # ext/pybind
+	UPDATE_DISCONNECTED 1
 	CMAKE_ARGS ${nanogui_CMAKE_ARGS}
 	TEST_COMMAND      ""
 )
